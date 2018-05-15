@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_notifications_white_18dp"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_verify_farmer"
+            android:icon="@drawable/ic_assignment_white_18dp"
+            android:title="Verify Farm" />
+        <item
+            android:id="@+id/add_soil_health_card"
+            android:icon="@drawable/ic_spa_white_18dp"
+            android:title="Add Soil Health Card" />
+        <item
+            android:id="@+id/show_profile"
+            android:icon="@drawable/ic_person_white_18dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/fill_profile_landing"
+            android:icon="@drawable/ic_person_white_18dp"
+            android:title="Fill Profile" />
+        <item
+            android:id="@+id/bind_farmer"
+            android:icon="@drawable/ic_person_white_18dp"
+            android:title="Bind Farmer" />
+    </group>
+
+    <item android:title="Communicate"
+        android:id="@+id/titletools">
+        <menu>
+           <!-- <item
+                android:id="@+id/gpsc"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Gpsc" />-->
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings_black_18dp"
+                android:title="Settings" />
+        </menu>
+    </item>
+
+</menu>

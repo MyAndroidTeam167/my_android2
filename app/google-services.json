@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1053381102915",
+    "firebase_url": "https://inspectorspade-40905.firebaseio.com",
+    "project_id": "inspectorspade-40905",
+    "storage_bucket": "inspectorspade-40905.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053381102915:android:7975d80702d55221",
+        "android_client_info": {
+          "package_name": "sss.spade.spadei.inspectorspade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053381102915-7fb3k1qroh43blmbul6udh34m231ulqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sss.spade.spadei.inspectorspade",
+            "certificate_hash": "265313e9b6d19267c808ca0f81bc695137ff3b42"
+          }
+        },
+        {
+          "client_id": "1053381102915-fjr8i20nrbff726uj9ftgfc1u83vubu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDclNC8U9686FbvzaLto9-ovCxQZ2D2y-8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053381102915-fjr8i20nrbff726uj9ftgfc1u83vubu4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+   <!-- <ImageView
+        android:id="@+id/emoticons_button"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_weight="0.15"
+        android:contentDescription="@string/button_description"
+        android:src="@mipmap/bottle" />-->
+
+    <EditText
+        android:id="@+id/chat_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".9"
+        android:hint="Enter Comment"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textColorHint="@color/black"
+        android:background="@android:color/transparent"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:layout_marginLeft="12dp"
+        />
+
+    <ImageView
+        android:id="@+id/post_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:src="@drawable/ic_send_green_800_18dp"
+        android:layout_marginRight="8dp"/>
+
+    <!--<Button
+        android:id="@+id/post_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:padding="4dp"
+        android:text="@string/post"/>-->
+</LinearLayout>

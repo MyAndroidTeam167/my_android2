@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    tools:context=".Login.ForgetPassword.CnfrmPass.OtpforpassActivity">
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edesg_background"
+        android:elevation="4dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        android:padding="35dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/otpforpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Otp"
+            android:textColorHint="@color/saddlebrown"
+            android:textColor="@color/ettextbrown"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/otpforpass"
+            android:id="@+id/submitforpass"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"/>
+
+        <TextView
+            android:id="@+id/resendotpforpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Otp"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/saddlebrown"
+            android:layout_below="@+id/otpforpass"
+            android:layout_alignRight="@+id/otpforpass"
+            android:layout_alignEnd="@+id/otpforpass" />
+
+        <TextView
+            android:id="@+id/sentforpass"
+            android:text="otp sent"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/otpresponseforpass"
+            android:text="otp response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</RelativeLayout>

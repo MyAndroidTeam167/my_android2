@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/no_internet_land_gif"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:background="@drawable/no_internetgif"
+        />
+    <TextView
+        android:id="@+id/no_text_internet"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_below="@id/no_internet_land_gif"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:text="Aw.... Snap No Internet Connection"/>
+
+</RelativeLayout>

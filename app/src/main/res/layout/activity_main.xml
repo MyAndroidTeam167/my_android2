@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#EDEDED"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".Login.MainActivity">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="20dp"
+        android:background="@drawable/rounded_edesg_background"
+        >
+
+
+        <LinearLayout
+
+         android:layout_centerHorizontal="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/emaillogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_email_grey_18dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColorHighlight="@color/colorPrimaryDark"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    android:hint="@string/email"
+                    android:inputType="text"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    />
+
+           </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                >
+                <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                    android:id="@+id/pass"
+                    android:layout_below="@id/emaillogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/ic_lock_grey_18dp"
+                    android:inputType="textPassword"
+                    app:drawable_hide="@drawable/eye_show"
+                    app:drawable_show="@drawable/eye_hidden"
+                    app:tint_color="@color/greyInactive"/>
+                   <!-- -->
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/need_help" />
+
+                <TextView
+                    android:id="@+id/forgetpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="@string/forget_password"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/loginbutt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_18sdp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/newUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="@dimen/_1sdp"
+                android:text="@string/new_user" />
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!--<ImageButton
+        android:id="@+id/user_profile_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_lay_for_farmer_profile"
+        android:elevation="4dp"
+        android:src="@drawable/ic_person_light_grey_24dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/toolbar_actionbar"
+        android:layout_centerHorizontal="true" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_photo"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_43sdp"
+        android:elevation="@dimen/_4sdp"
+        android:layout_below="@+id/toolbar_actionbar"
+        android:background="@drawable/rounded_lay_for_farmer_profile"
+        android:src="@drawable/ic_person_light_grey_24dp" />
+
+</RelativeLayout>

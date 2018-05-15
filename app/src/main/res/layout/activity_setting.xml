@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/my_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_actionbar">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout2sett">
+
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/txt"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/white"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:text="Upload Profile Img"
+                        android:textColor="@color/saddlebrown"
+                        android:textSize="@dimen/_17ssp"/>
+                    <!--app:edittextfont="ROBOTO-REGULAR.TTF"-->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:visibility="gone"
+                        android:id="@+id/inspector_profile_photo"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:elevation="4dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/rounded_lay_for_farmer_profile"
+                        android:src="@drawable/ic_person_black_18dp" />
+
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/txtf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/white"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:singleLine="true"
+                        android:text="Account"
+                        android:textColor="@color/saddlebrown"
+                        android:textSize="20sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+
+                        <!--<sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                            android:id="@+id/tvsetlanguage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:background="@drawable/box"
+                            android:padding="15dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Change Language"
+                            app:edittextfont="ROBOTO-REGULAR.TTF"/>-->
+
+                        <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                            android:id="@+id/tvchangepass"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimaryDark"
+                            android:textSize="15sp"
+                            android:padding="15dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Change Password"
+                            />
+
+<!--
+                        android:background="@drawable/box"
+-->
+
+
+                    </LinearLayout>
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:background="@color/white"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:singleLine="true"
+                        android:text="Settings"
+                        android:textColor="@color/saddlebrown"
+                        android:textSize="20sp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                       <!-- <com.example.hp.farmapp.custom.CustomTextView
+                            android:id="@+id/push_notifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/line"
+                            android:padding="20dp"
+                            android:singleLine="true"
+                            android:text="Push Notification"
+                            android:textColor="@color/scondarytxt"
+                            android:textSize="15sp"
+                            app:edittextfont="ROBOTO-REGULAR.TTF" />
+-->
+                       <!-- <com.rey.material.widget.Switch
+                            style="@style/Material.Widget.Switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="30dp"
+                            android:checked="false"
+                            android:gravity="center" />-->
+
+                    </RelativeLayout>
+                    <!-- <com.chingon.custom.CustomTextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                          android:background="@drawable/line"
+                         android:layout_marginTop="30dp"
+                         android:text="Push Notification "
+                         android:drawableRight="@mipmap/onbutton"
+                         android:padding="20dp"
+                         android:singleLine="true"
+                         android:textColor="@color/scondarytxt"
+                         android:textSize="15sp"
+                         app:edittextfont="ROBOTO-REGULAR.TTF"
+                          />-->
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="20dp"
+                        android:singleLine="true"
+                        android:text="Privacy Policy"
+                        android:textColor="@color/scondarytxt"
+                        android:drawableRight="@drawable/ic_chevron_right_grey_18dp"
+                        android:textSize="15sp"
+                         />
+
+                    <!--       android:background="@drawable/line"
+                           android:drawableRight="@mipmap/dropdown"-->
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="20dp"
+                        android:singleLine="true"
+                        android:text="Terms of Use"
+                        android:drawableRight="@drawable/ic_chevron_right_grey_18dp"
+                        android:textColor="@color/scondarytxt"
+                        android:textSize="15sp"
+                         />
+
+                    <!--android:background="@drawable/line"
+                        android:drawableRight="@mipmap/dropdown"-->
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/share_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="20dp"
+                        android:singleLine="true"
+                        android:text="Share"
+                        android:drawableRight="@drawable/ic_chevron_right_grey_18dp"
+                        android:textColor="@color/scondarytxt"
+                        android:textSize="15sp"
+                         />
+                       <!-- android:background="@drawable/line"
+                        android:drawableRight="@mipmap/dropdown"-->
+
+
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/logout_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:textSize="20sp"
+                        android:layout_weight=".5"
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="15dp"
+                        android:textColor="#FFFFFF"
+                        android:text="Logout"
+                        />
+
+<!--
+                    android:background="@drawable/box"
+-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:text="version-0.11001"/>
+                  <!--  <com.example.hp.farmapp.custom.CustomTextView
+                        android:id="@+id/logout_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/line"
+                        android:padding="20dp"
+                        android:singleLine="true"
+                        android:text="Logout"
+                        android:textColor="@color/scondarytxt"
+                        android:textSize="15sp"
+                        app:edittextfont="ROBOTO-REGULAR.TTF" />-->
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

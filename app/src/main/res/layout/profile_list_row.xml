@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfe3ee"
+        >
+
+        <ImageView
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_perm_identity_red_300_48dp"
+            android:background="@drawable/rounded_edesg_background"/>
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/notimsgtitle"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="70dp"
+            android:text="Notification Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_below="@+id/notimsgtitle"
+            android:id="@+id/notimsgdescription"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="85dp"
+            android:text="Notification Message Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginRight="4dp"/>
+
+        <TextView
+
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"
+            android:text="Today 12:13pm"
+            android:layout_marginTop="3dp"
+            android:id="@+id/notitime"
+            android:layout_below="@+id/notimsgdescription"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4169e1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"/>
+
+
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/logInBg"
+            ></View>
+
+        <TextView
+            android:id="@+id/idfornoti"
+            android:text="XX"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/idfornoti"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18dp"
+            android:text="aaaa"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    -->
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/notitime"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/white"/>
+
+</LinearLayout>

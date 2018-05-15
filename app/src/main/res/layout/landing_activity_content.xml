@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@+id/swipeToRefreshlanding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/mywidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="#ff4500"
+            android:text="Please Fill Your Profile...  Please Fill Your Profile...   Please Fill Your Profile..."
+            />
+
+<RelativeLayout
+    android:layout_below="@id/mywidget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_image_layout">
+       <!-- <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:src="@drawable/design_element"
+            android:scaleType="fitXY"/>-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_slider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_dots"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/vp_slider"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
+    <!--<TextView
+        android:id="@+id/titleforrecycler"
+        android:layout_marginTop="70dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farms Under Mr. Inspector"
+        android:layout_centerHorizontal="true"
+        />-->
+    <TextView
+        android:id="@+id/no_ntwrk_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Connect to network then swipe down to refresh and load Data"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_17sdp"
+        android:textSize="@dimen/_17ssp"
+        android:textColor="@color/colorAccent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/no_farm_rel"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Farm And its Activities are available to Verify at the moment"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/linear_image_layout"
+        android:id="@+id/recy_view_farmers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_10sdp"
+            android:visibility="gone"
+            android:id="@+id/rel_binding_lay"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/colorPrimaryDark"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Admin For Binding Process"
+                android:elevation="@dimen/_10sdp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_20ssp"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

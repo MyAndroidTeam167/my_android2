@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".PersonData.ShowProfileActivity">
+
+    <!--
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/my_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    -->
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/showprofiletoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/gobackbutt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_arrow_back_white_24dp"
+            android:scaleType="fitXY" />
+
+        <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:text="My Profile"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+        <!--   <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="14dp"
+               android:src="@drawable/edit"
+               android:layout_gravity="right"
+               android:layout_marginRight="20dp"
+               android:textColor="#fff"/>-->
+
+
+        <ImageButton
+            android:id="@+id/editoptionforproile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_title"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_border_color_white_24dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- RelativeLayout Children go here -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:alpha="0.8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/design_element" />
+
+
+                    <!--      <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:gravity="center_horizontal"
+                              >
+                              <ImageButton
+                                  android:id="@+id/circleview"
+                                  android:layout_width="100dp"
+                                  android:fitsSystemWindows="true"
+                                  android:layout_height="100dp"
+                                  android:layout_below="@+id/login_title"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_marginTop="100dp"
+                                  android:background="@drawable/user_profile_image_background"
+                                  android:elevation="4dp"
+                                  android:src="@drawable/user" />
+
+                          </LinearLayout>-->
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Name"
+                        android:textSize="14sp" />
+
+                    <!--   <LinearLayout
+                           android:layout_weight="0.70"
+                           android:layout_marginTop="10dp"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+               -->
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofilename"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:inputType="textPersonName"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                    <!--<com.example.hp.farmapp.PersonData.customfonts.MyTextView
+                        android:id="@+id/showpromiddlename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Kumar"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:background="#00000000"/>
+                    <com.example.hp.farmapp.PersonData.customfonts.MyTextView
+                        android:id="@+id/showprolastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Patil"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:background="#00000000"/>-->
+                    <!--  </LinearLayout>-->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Email"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofileemail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:inputType="textEmailAddress"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="DOB"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofiledob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="date"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Mob No"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofilemobno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="phone"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Mob No(Alt)"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofilemobno2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="phone"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Landline No"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofilelandlineno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="phone"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Aadhaar No"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofileaadharNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="number"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Pan No"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofilepanno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.30"
+                        android:padding="20dp"
+                        android:text="Address"
+                        android:textSize="14dp" />
+
+                    <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+                        android:id="@+id/showprofileaddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.70"
+                        android:background="#00000000"
+                        android:inputType="textMultiLine"
+                        android:padding="16dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#ACACAC" />
+
+
+                <!--  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Display Status Goes Here...."
+                  android:textColor="#868686"
+                  android:textSize="16dp"
+                  android:background="#f0f0f4"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp"
+                  android:paddingLeft="22dp"/>-->
+
+            </LinearLayout>
+
+
+            <!-- <ImageButton
+                 android:id="@+id/circleview"
+                 android:layout_width="100dp"
+                 android:fitsSystemWindows="true"
+                 android:layout_height="100dp"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="80dp"
+                 android:background="@drawable/user_profile_image_background"
+                 android:elevation="4dp"
+                 android:src="@drawable/icon_user_64"/>-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/show_ins_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/rounded_lay_for_farmer_profile"
+                android:elevation="4dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/ic_person_white_18dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/capture_image_profile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="@dimen/_120sdp"
+                android:layout_toRightOf="@id/show_ins_profile_image"
+                android:background="@drawable/rounded_bg_for_crop"
+                android:elevation="4dp"
+                android:src="@drawable/ic_camera_alt_white_18dp"
+
+                />
+
+            <View
+                android:id="@+id/view_below_design_and_right_profile"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/design_element_farmer_profile"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:layout_toRightOf="@id/farmer_profile_photo" />
+
+            <!-- <TextView
+                 android:id="@+id/preview_pro_pop_up"
+                 android:layout_marginTop="@dimen/_30sdp"
+                 android:layout_marginLeft="@dimen/_1sdp"
+                 android:textSize="@dimen/_10ssp"
+                 android:elevation="@dimen/_5sdp"
+                 android:textColor="@color/white"
+                 android:layout_below="@id/design_element_farmer_profile"
+                 android:layout_toRightOf="@id/farmer_profile_photo"
+                 android:layout_width="@dimen/_40sdp"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:text="Capture Image"/>-->
+
+            <!-- <View
+                 android:id="@+id/farmer_info_name_view"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_120sdp"
+                 android:layout_below="@id/design_element_farmer_profile"
+                 android:background="#ebca0707">-->
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

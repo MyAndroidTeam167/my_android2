@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:id="@+id/recy_for_soil_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#d7d7d7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:elevation="@dimen/_10sdp"
+    >
+
+            <ImageView
+                android:id="@+id/soil_test_image"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center_vertical|center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/soil2"
+                android:textSize="@dimen/_40sdp" />
+
+
+           <!-- <ImageView
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:src="@drawable/ic_wallpaper_black_24dp"
+                android:layout_toRightOf="@id/image_for_soil"
+                android:contentDescription="message icon"
+                android:layout_marginTop="@dimen/_15sdp"
+                />-->
+
+            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                android:id="@+id/farm_soil_pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toRightOf="@id/soil_test_image"
+                android:text="Sanawad Wala Khet"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableLeft="@drawable/ic_local_florist_black_18dp"
+                android:textColor="#383838"
+                android:textSize="@dimen/_13ssp" />
+
+
+            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                android:id="@+id/soil_type_soil_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/farm_soil_pet_name"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_toRightOf="@id/soil_test_image"
+                android:gravity="center"
+                android:text="Alluvial Soils"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableLeft="@drawable/ic_terrain_black_18dp"
+                android:textColor="#606060"
+                android:textSize="@dimen/_11sdp" />
+
+            <Button
+                android:id="@+id/add_card_soil_health_card"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/butt_back_for_soil_health_card"
+                android:fontFamily="@font/roboto_thin"
+                android:text="Add Card"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_10ssp" />
+
+            <!--<sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                android:id="@+id/soil_crop_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_for_soil"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Crop Status : Assigned" />-->
+
+           <!-- <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_room_black_24dp"
+                android:scaleType="fitStart"
+                android:layout_below="@id/soil_test_image"
+                android:contentDescription="message icon"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />-->
+
+            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                android:drawableLeft="@drawable/ic_room_black_18dp"
+                android:id="@+id/soil_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/soil_test_image"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:drawablePadding="@dimen/_2sdp"
+                android:textSize="@dimen/_10ssp"
+                android:text="here, where, then there, iske piche ,uske piche, Madhaya pradesh, India" />
+
+
+
+<!--
+
+for ... use this textview
+            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                android:id="@+id/soil_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_for_soil"
+                android:drawableLeft="@drawable/ic_room_black_18dp"
+                android:ellipsize="end"
+                android:ems="12"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:lines="1"
+                android:text="here, where, then there, iske piche ,uske piche, Madhaya pradesh India" />-->
+            <!-- <ImageView
+                 android:id="@+id/soil_test_image"
+                 android:layout_width="match_parent"
+                 android:layout_height="150dp"
+                 android:layout_margin="7dp"
+                 android:scaleType="fitXY"
+                 />-->
+            <!-- <ImageView
+                 android:id="@+id/faded_image"
+                 android:layout_width="match_parent"
+                 android:layout_height="150dp"
+                 android:layout_margin="7dp"
+                 android:scaleType="fitXY"
+                  />-->
+            <!--
+                        android:src="#59236B8E"
+            -->
+            <!--  <LinearLayout
+                  android:layout_toRightOf="@id/single_word_for_soil"
+                  android:id="@+id/lin_farm_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_15sdp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginBottom="5dp"
+                  >
+
+                  <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                      android:id="@+id/petname_label"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Farm : "
+                      android:textSize="17sp" />
+
+
+              </LinearLayout>
+  -->
+            <!-- <LinearLayout
+                 android:id="@+id/lin_soil_type_nd_crop_status"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/lin_farm_name"
+                 android:layout_marginLeft="12dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginRight="12dp"
+                 android:weightSum="1">
+
+
+
+
+             </LinearLayout>
+ -->
+            <!--<LinearLayout
+                android:id="@+id/lin_irri_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lin_soil_type_nd_crop_status"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                    android:id="@+id/soil_irrigration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Irrigation Type : Sprinkle type"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+-->
+            <!-- <LinearLayout
+                 android:id="@+id/lin_soil_address"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/lin_irri_type"
+                 android:layout_marginLeft="12dp"
+                 android:layout_marginRight="12dp"
+                 android:layout_marginTop="5dp"
+                 android:gravity="center"
+                 android:orientation="horizontal">
+
+
+             </LinearLayout>
+ -->
+</RelativeLayout>
+        </RelativeLayout>
+</RelativeLayout>

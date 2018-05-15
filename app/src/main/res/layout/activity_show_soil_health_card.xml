@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:alpha=".3"
+        android:scaleType="fitXY"
+        android:src="@drawable/soil2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30FFC1C1"
+        android:layout_marginTop="?attr/actionBarSize">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#003300"
+                android:elevation=".3dp"
+                android:orientation="horizontal"
+                android:padding=".3dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Nutrient"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:text="Test Value"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Rating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:gravity="center"
+                    android:text="Rating"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation=".3dp"
+                android:orientation="horizontal"
+                android:padding=".3dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="pH"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pHTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/roboto_italic"
+                    android:gravity="center"
+                    android:text="cz"
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pHRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#30000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation=".3dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="EC"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ecTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_italic"
+                    android:text=" "
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ecRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Organic Carbon (OC)"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ocTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_italic"
+                    android:text=""
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ocRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=""
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Nitrogen (N)"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/nTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/roboto_italic"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Phosphorus (P)"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:text=" "
+                    android:fontFamily="@font/roboto_italic"
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Potassium (K)"
+                    android:textColor="@color/saddlebrown"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/kTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:text=" "
+                    android:fontFamily="@font/roboto_italic"
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/kRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Sulphur (S)"
+                    android:textColor="@color/saddlebrown"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:text=" "
+                    android:fontFamily="@font/roboto_italic"
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Zinc (Zn)"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/znTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:text=" "
+                    android:fontFamily="@font/roboto_italic"
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/znRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Boron (B)"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_italic"
+                    android:textColor="#941414"
+                    android:text=" "
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/bRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:fontFamily="@font/roboto"
+                    android:text=" "
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Iron (Fe)"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/feTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_italic"
+                    android:text=" "
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/feRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:fontFamily="@font/roboto"
+                    android:text=" "
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Manganese (Mn)"
+                    android:textColor="@color/saddlebrown"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mnTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_italic"
+                    android:text=" "
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mnRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:text="Available Copper (Cu)"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cuTestValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/roboto_italic"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#941414"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cuRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:text=" "
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:textColor="@color/saddlebrown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="#30000000"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

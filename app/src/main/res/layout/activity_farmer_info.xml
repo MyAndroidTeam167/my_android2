@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sss.spade.spadei.inspectorspade.FarmerInformation.FarmerInfoActivity">
+    <!--<include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ImageView
+            android:elevation="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/gobackbuttfarmer_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_arrow_back_white_24dp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/design_element_farmer_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/design_element" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/farmer_profile_photo"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:elevation="4dp"
+            android:background="@drawable/rounded_lay_for_farmer_profile"
+            android:src="@drawable/ic_person_light_grey_24dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/capture_image_profile"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@id/design_element_farmer_profile"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_toLeftOf="@id/view_below_design_and_right_profile"
+            android:background="@drawable/rounded_bg_for_crop"
+            android:elevation="4dp"
+            android:src="@drawable/ic_camera_alt_white_18dp"
+
+            />
+
+        <View
+            android:id="@+id/view_below_design_and_right_profile"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/design_element_farmer_profile"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_toRightOf="@id/farmer_profile_photo" />
+
+        <TextView
+            android:id="@+id/preview_pro_pop_up"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:textSize="@dimen/_10ssp"
+            android:elevation="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:layout_below="@id/design_element_farmer_profile"
+            android:layout_toRightOf="@id/farmer_profile_photo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Capture Image"/>
+
+        <View
+            android:id="@+id/farmer_info_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_below="@id/design_element_farmer_profile"
+            android:background="#ebca0707">
+
+            <!--
+        android:background="#ebca0707"
+-->
+        </View>
+
+        <TextView
+            android:id="@+id/farmer_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/farmer_profile_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Shubham Kumar"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/farmer_info_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/farmer_info_name"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:text="123/A Nagzhiri, Ujjain"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/farmer_info_name_view"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+<!--
+            <TextView
+                android:id="@+id/preview_pro_pop_up"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_account_box_black_18dp"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_18dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Preview Profile Pic"
+                android:textSize="13sp" />
+-->
+
+
+            <TextView
+
+                android:id="@+id/email_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_email_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Email : sk0494@gmail.com"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/mob_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_phone_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Mobile No. : 9424517428"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/pan_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_credit_card_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Pan No. : SDASD4344F"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/aadhar_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_credit_card_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Aadhar No. : 324524356766"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/alt_mob_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_phone_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Mobile No.(Alt): 7345362345"
+                android:textSize="13sp" />
+
+           <!-- <TextView
+                android:id="@+id/add_pro_farmer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_person_pin_circle_black_18dp"
+                android:drawablePadding="3dp"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Address: "
+                android:textSize="13sp" />-->
+
+           <!-- <com.rey.material.widget.Button
+                android:id="@+id/upload_image_farmer_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:textSize="@dimen/_17ssp"
+                android:textColor="@color/white"
+                android:background="#ebca0707"
+                android:padding="@dimen/_10sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"/>-->
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

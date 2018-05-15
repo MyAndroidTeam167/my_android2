@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7d7d7"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="sss.spade.spadei.inspectorspade.SoilHealthCard.SoilTestNotDoneListActivity">
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/my_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@+id/swipeToRefreshlanding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#69DCDCDC">
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recy_soil_farm_list"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+</android.support.v7.widget.RecyclerView>
+        <View
+            android:layout_below="@id/recy_soil_farm_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:background="#d7d7d7"/>
+
+     <!--       <TextView
+                android:id="@+id/no_ntwrk_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_180sdp"
+                android:gravity="center"
+                android:text="Please Connect to network then swipe down to refresh and load Data"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />/>-->
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/no_farm_avaialable_for_soil_health_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_150sdp"
+                android:text="No farm Available for uploading Soil health card"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+    </RelativeLayout>
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>

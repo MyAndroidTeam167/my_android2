@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/showprofiletoolbar"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/gobackbutt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_arrow_back_white_24dp"
+            android:layout_marginLeft="20dp"/>
+
+        <sss.spade.spadei.inspectorspade.PersonData.customFonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:textColor="#fff"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/no_internet_land_gif"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_130sdp"
+        android:background="@drawable/no_internetgif"
+        />
+    <TextView
+        android:id="@+id/no_text_internet"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_below="@id/no_internet_land_gif"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:text="Aw.... Snap No Internet Connection"/>
+
+</RelativeLayout>

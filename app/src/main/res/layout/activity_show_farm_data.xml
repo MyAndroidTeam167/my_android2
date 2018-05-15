@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@+id/swipeToRefreshshowfarmdata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.hp.spadeinspector.LandingActivity.ShowFarmData.ShowFarmDataActivity">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/my_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e4e4e4">
+
+            <!--c6c6c6-->
+
+            <!-- <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 android:background="@color/colorPrimaryDark"
+                 android:id="@+id/imageView2" />-->
+            <!--
+                    android:layout_marginTop="?attr/actionBarSize"
+            -->
+
+            <RelativeLayout
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/rating_farmer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_bg_for_show_data"
+                    android:fontFamily="@font/anaheim"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="35sp" />
+
+                <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating_farmer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:text="Rating"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text=""
+                    android:id="@+id/show_data_farm_pet_name"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageView2"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_my_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f1f1f1">
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/my_activities_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Activities"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_total_count"/>
+
+                        <View
+                            android:id="@+id/activity_line"
+                            android:layout_width="match_parent"
+                            android:layout_height=".9dp"
+                            android:layout_below="@id/my_activities_label"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#c6c6c6" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/my_activities_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/activity_line"
+                            android:layout_margin="10dp"
+                            android:text="VIEW ACTIVITIES"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_view_soil_health_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f1f1f1">
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/view_soil_health_card_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Soil Health Card"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/soil_health_card_status"/>
+
+                        <View
+                            android:id="@+id/soil_health_card_line"
+                            android:layout_width="match_parent"
+                            android:layout_height=".9dp"
+                            android:layout_below="@id/view_soil_health_card_label"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#c6c6c6" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/view_soil_health_card_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/view_soil_health_card_label"
+                            android:layout_margin="10dp"
+                            android:text="VIEW SOIL HEALTH CARD"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+<!--
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_verify_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#d3d3d3">
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/verify_activities_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="To Verify"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_verify_count"/>
+
+                        <View
+                            android:id="@+id/verify_activity_line"
+                            android:layout_width="match_parent"
+                            android:layout_height=".9dp"
+                            android:layout_below="@id/verify_activities_label"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#c6c6c6" />
+
+                        <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                            android:id="@+id/verify_activities_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/verify_activities_label"
+                            android:layout_margin="10dp"
+                            android:text="VERIFY ACTIVITIES"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+-->
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f1f1f1">
+
+                        <LinearLayout
+                            android:id="@+id/linear_crop_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_margin="10dp"
+                                android:id="@+id/crop_name_label"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text="Crop Name :"
+                                android:textSize="16sp"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/ic_local_florist_black_18dp"/>
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_margin="10dp"
+                                android:id="@+id/tv_crop"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_crop"
+                            android:layout_width="match_parent"
+                            android:layout_height=".8dp"
+                            android:layout_below="@id/linear_crop_name"
+                            android:background="#c6c6c6" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_task_pending"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_crop"
+                            android:weightSum="1">
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_margin="10dp"
+                                android:id="@+id/label_task_pending"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_timer_black_18dp"
+                                android:text="Task Pending :"
+                                android:textColor="@color/black"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:textSize="16sp"
+                                android:layout_weight=".5"/>
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_margin="10dp"
+                                android:id="@+id/tv_pending"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_task_pending"
+                            android:layout_width="match_parent"
+                            android:layout_height=".8dp"
+                            android:layout_below="@id/linear_task_pending"
+                            android:background="#c6c6c6" />
+
+                        <LinearLayout
+                            android:layout_below="@id/view_task_pending"
+                            android:id="@+id/linear_task_completed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_margin="10dp"
+                                android:id="@+id/label_task_completed"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/view_task_pending"
+                                android:text="Task Completed :"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:drawableLeft="@drawable/ic_alarm_on_black_18dp"/>
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_margin="10dp"
+                                android:id="@+id/tv_completed"/>
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/view_task_completed"
+                            android:layout_width="match_parent"
+                            android:layout_height=".8dp"
+                            android:layout_below="@id/linear_task_completed"
+                            android:background="#c6c6c6" />
+                        <LinearLayout
+                            android:id="@+id/linear_sowing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_task_completed"
+                            android:weightSum="1">
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_margin="10dp"
+                                android:id="@+id/label_task_sowing"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/view_task_pending"
+                                android:text="Sowing Date :"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:drawableLeft="@drawable/ic_insert_invitation_black_18dp"
+                                android:layout_weight=".5"/>
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text="dd-mm-yyyy"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_margin="10dp"
+                                android:id="@+id/tv_sowing_date"/>
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/view_task_sowing"
+                            android:layout_width="match_parent"
+                            android:layout_height=".8dp"
+                            android:layout_below="@id/linear_sowing"
+                            android:background="#c6c6c6" />
+                        <LinearLayout
+                            android:id="@+id/linear_harvesting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_below="@id/view_task_sowing"
+                            android:weightSum="1">
+
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_margin="10dp"
+                                android:drawableLeft="@drawable/ic_event_available_black_18dp"
+                                android:id="@+id/label_task_harvesting"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/view_task_pending"
+                                android:text="Date of Harvest :"
+                                android:textColor="@color/black"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:textSize="16sp"
+                                android:layout_weight=".5"/>
+                            <sss.spade.spadei.inspectorspade.TypeFacedTextView.TypefacedTextView
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="wrap_content"
+                                android:text="dd-mm-yyyy"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:id="@+id/tv_harvesting_date"
+                                android:layout_margin="10dp"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

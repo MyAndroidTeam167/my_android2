@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#238E68</color>
+    <color name="colorPrimaryDark">#12123b</color>
+    <color name="colorAccentt">#0087be</color>
+    <color name="colorAccent">#19c2d8</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="logInBg">#b1b1e7 </color>
+    <color name="greenColShade">#C0D9AF</color>
+    <color name="saddlebrownn">#A82828</color>
+    <color name="saddlebrown">#383838</color>
+    <color name="lightbrown">#4267b2</color>
+    <color name="lightGreen">#E5FFE5</color>
+    <color name="ettextbrown">#4267b2</color>
+    <color name="farmText">#6F4242</color>
+    <color name="taskStatusPending">#FF6347</color>
+    <color name="taskStatusDone">#3CB371</color>
+    <color name="taskStatusUpcoming">#79CDCD</color>
+    <color name="taskStatusUpcomingTint">#F5F5F5</color>
+    <color name="greyInactive">#696969</color>
+    <color name="new_my_color">#4267b2</color>
+
+
+
+    <color name="green">#73B802</color>
+    <color name="greendark">#5C9301</color>
+    <color name="scondarytxt">#979797</color>
+    <color name="primarytxt">#3F3F3F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lightgreen">#ABD467</color>
+    <color name="grey">#EEEEEE</color>
+    <color name="drawer_line_dark">#373737</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="bright_blue">#3686FF</color>
+    <color name="deep_blue">#00BFFF</color>
+    <color name="lightGrey">#D3D3D3</color>
+    <color name="textGrey">#808080</color>
+    <color name="calMain">#FC6C55</color>
+    <color name="for_farm_action_reply">#b4bd77</color>
+</resources>
