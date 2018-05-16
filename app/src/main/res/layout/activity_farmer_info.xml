@@ -69,6 +69,7 @@
             android:layout_toRightOf="@id/farmer_profile_photo" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/preview_pro_pop_up"
             android:layout_marginTop="@dimen/_30sdp"
             android:layout_marginLeft="@dimen/_1sdp"
@@ -101,7 +102,7 @@
             android:layout_below="@id/farmer_profile_photo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:text="Shubham Kumar"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -117,7 +118,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="3dp"
             android:gravity="center_horizontal"
-            android:text="123/A Nagzhiri, Ujjain"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -160,7 +161,7 @@
                 android:drawablePadding="3dp"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Email : sk0494@gmail.com"
+                android:text="Email :"
                 android:textSize="13sp" />
 
             <TextView
@@ -176,7 +177,7 @@
                 android:drawablePadding="3dp"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Mobile No. : 9424517428"
+                android:text="Mobile No. :"
                 android:textSize="13sp" />
 
             <TextView
@@ -190,7 +191,7 @@
                 android:drawablePadding="3dp"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Pan No. : SDASD4344F"
+                android:text="Pan No. :"
                 android:textSize="13sp" />
 
             <TextView
@@ -206,7 +207,7 @@
                 android:drawablePadding="3dp"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Aadhar No. : 324524356766"
+                android:text="Aadhar No. :"
                 android:textSize="13sp" />
 
             <TextView
@@ -220,7 +221,7 @@
                 android:drawablePadding="3dp"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Mobile No.(Alt): 7345362345"
+                android:text="Mobile No.(Alt):"
                 android:textSize="13sp" />
 
            <!-- <TextView

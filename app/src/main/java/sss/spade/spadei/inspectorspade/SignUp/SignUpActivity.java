@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -206,9 +207,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     DataHandler.newInstance().setSignUpmail(emailonrec);
                                     DataHandler.newInstance().setSignUpPassword(passonrec);
                                     progressDialog.dismiss();
-
                                     Intent intent=new Intent(context,MainActivity.class);
                                     startActivity(intent);
+                                    Toast.makeText(context, "User Registered Successfully", Toast.LENGTH_SHORT).show();
                                     finish();
 
                                 }
@@ -225,7 +226,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(SignUpActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(SignUpActivity.this, R.string.error_text, Toast.LENGTH_SHORT).show();
                             }
                         }) {
                     @Override

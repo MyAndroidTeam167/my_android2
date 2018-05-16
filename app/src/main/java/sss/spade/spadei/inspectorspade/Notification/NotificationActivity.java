@@ -97,7 +97,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -7);
-        SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = df.format(cal.getTime());        //Bitmap icon = null;
         Log.e("Date 7 days earlier",""+formattedDate);
         DatabaseHandler db = new DatabaseHandler(context);

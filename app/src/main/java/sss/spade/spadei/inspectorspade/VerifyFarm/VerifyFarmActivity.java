@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -422,7 +423,8 @@ public class VerifyFarmActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(VerifyFarmActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(VerifyFarmActivity.this,R.string.error_text, Toast.LENGTH_SHORT).show();
                             }
                         }) {
                     @Override

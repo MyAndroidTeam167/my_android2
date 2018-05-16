@@ -427,6 +427,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                                         Intent intent =new Intent(context,LandingActivity.class);
                                                         SharedPreferencesMethod.setString(context,"cctt",comp_num);
                                                         SharedPreferencesMethod.setBoolean(context, "Login", true);
+                                                        Toast.makeText(context, "Login Successfull", Toast.LENGTH_SHORT).show();
                                                         startActivity(intent);
                                                         finish();
                                                     }else{
@@ -590,7 +591,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
                                 Log.e("TAGerror :",error.toString());
-                                Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, R.string.error_text, Toast.LENGTH_SHORT).show();
                             }
                         }) {
                     @Override

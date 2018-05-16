@@ -41,7 +41,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_landing">LandingActivity</string>
     <string name="title_activity_maps">Map</string>
-    <string name="internet_not_connected">Please check your internet Connection &amp; Try again</string>
+    <string name="internet_not_connected">Please check your internet Connection and Try again</string>
+    <string name="error_text">Network error Please Try again..</string>
     <string name="back_pressed">Press Back again to Exit.</string>
     <string name="welcome">Login Successful</string>
     <string name="profile_first">Please fill your profile first</string>

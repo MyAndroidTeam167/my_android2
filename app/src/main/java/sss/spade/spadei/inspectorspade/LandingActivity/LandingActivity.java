@@ -322,7 +322,7 @@ public class LandingActivity extends AppCompatActivity
                                                     SharedPreferencesMethod.setString(context, "person_num", person_num);
 
                                                     if (!person_num.equals("")) {
-                                                        hideItem();
+                                                       // hideItem();
                                                         mywidget.setVisibility(View.GONE);
                                                     } else {
                                                         mywidget.setVisibility(View.VISIBLE);
@@ -359,6 +359,9 @@ public class LandingActivity extends AppCompatActivity
                                     new com.android.volley.Response.ErrorListener() {
                                         @Override
                                         public void onErrorResponse(VolleyError error) {
+                                            Log.e("Error",error.toString());
+                                            Toast.makeText(LandingActivity.this, R.string.error_text, Toast.LENGTH_LONG).show();
+
                                             // progressDialog.dismiss();
                                         }
                                     }) {
@@ -597,11 +600,11 @@ public class LandingActivity extends AppCompatActivity
             //finish();
 
         }
-        else if (id == R.id.fill_profile_landing) {
+       /* else if (id == R.id.fill_profile_landing) {
             Intent intent=new Intent(context, FillProfileActivity.class);
             startActivity(intent);
             //finish();
-        }
+        }*/
 
         else if (id == R.id.bind_farmer) {
             Intent intent=new Intent(context, BindingActivity.class);
@@ -849,7 +852,8 @@ public class LandingActivity extends AppCompatActivity
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(LandingActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(LandingActivity.this, R.string.error_text, Toast.LENGTH_LONG).show();
                             }
                         }) {
                     @Override
@@ -965,6 +969,8 @@ public class LandingActivity extends AppCompatActivity
                     new com.android.volley.Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
+                            Log.e("Error",error.toString());
+                            Toast.makeText(LandingActivity.this, R.string.error_text, Toast.LENGTH_LONG).show();
                             progressDialog.dismiss();
                         }
                     }) {
@@ -986,11 +992,11 @@ public class LandingActivity extends AppCompatActivity
 
     }
 
-    private void hideItem()
+  /*  private void hideItem()
     {
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         Menu nav_Menu = navigationView.getMenu();
         nav_Menu.findItem(R.id.fill_profile_landing).setVisible(false);
-    }
+    }*/
 
 }

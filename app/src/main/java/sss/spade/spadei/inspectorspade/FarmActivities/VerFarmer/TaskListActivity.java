@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -277,12 +278,16 @@ public class TaskListActivity extends AppCompatActivity {
                                 }));
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                Toast.makeText(context, R.string.server_error, Toast.LENGTH_LONG).show();
                             }
                         }
                     },
                     new com.android.volley.Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
+                            Log.e("Error",error.toString());
+                            Toast.makeText(context, R.string.error_text, Toast.LENGTH_LONG).show();
+
                         }
                     }){
                 @Override

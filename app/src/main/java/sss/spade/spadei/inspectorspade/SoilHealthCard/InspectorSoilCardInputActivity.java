@@ -379,15 +379,15 @@ public class InspectorSoilCardInputActivity extends AppCompatActivity {
                             if(from_activity.equals("soilnotdone")){
                             Log.e("checkArray","This is response "+response);
                             progressDialog.dismiss();
-                            Toast.makeText(context, "Soil health card submitted Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Soil health card Data Submitted Successfully", Toast.LENGTH_SHORT).show();
                             Intent intent =new Intent(context,SoilTestNotDoneListActivity.class);
                             startActivity(intent);
                             finish();
                             }else{
                                 Log.e("checkArray","This is response "+response);
                                 progressDialog.dismiss();
-                                Toast.makeText(context, "Soil health card submitted Successfully", Toast.LENGTH_SHORT).show();
-                                Intent intent =new Intent(context,ShowSoilHealthCardActivity.class);
+                                Toast.makeText(context, "Soil health card Data Submitted Successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent =new Intent(context,LandingActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -403,7 +403,7 @@ public class InspectorSoilCardInputActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error){
                         // Log.e(TAG,error.toString());
-                        Toast.makeText(InspectorSoilCardInputActivity.this,error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(InspectorSoilCardInputActivity.this,R.string.error_text, Toast.LENGTH_LONG).show();
                         Log.e("ERROR:",error.toString());
                         progressDialog.dismiss();
 

@@ -341,14 +341,15 @@
                      android:layout_height="wrap_content">
                  </View>-->
                 <TextView
+                    android:layout_margin="@dimen/_5sdp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Open Chatbox"
+                    android:text="Comment"
                     android:gravity="right"
-                    android:textSize="17sp"
+                    android:textSize="@dimen/_17ssp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorPrimaryDark"
                     android:id="@+id/view_all_messages"/>
 
             </LinearLayout>

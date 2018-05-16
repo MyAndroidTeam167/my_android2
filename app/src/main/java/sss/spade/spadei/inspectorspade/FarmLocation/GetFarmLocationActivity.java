@@ -864,6 +864,7 @@ if(location!=null) {
                 {
                     progressDialog = ProgressDialog.show(GetFarmLocationActivity.this,
                             getString(R.string.dialog_please_wait), "");
+
                     callVolley();
 
                 }else{
@@ -888,6 +889,7 @@ if(location!=null) {
                                 progressDialog.dismiss();
                                 Intent intent = new Intent(context, VerifySingleFarmActivity.class);
                                 //intent.putExtra("farm_num",farm_num);
+                                Toast.makeText(context, "Farm Location Captured Successfully", Toast.LENGTH_SHORT).show();
                                 intent.putExtra("from","getfarm");
                                 startActivity(intent);
                                 Toast.makeText(context, response, Toast.LENGTH_SHORT).show();

@@ -293,7 +293,8 @@ public class SoilTestNotDoneListActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(SoilTestNotDoneListActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(SoilTestNotDoneListActivity.this, R.string.error_text, Toast.LENGTH_SHORT).show();
                             }
                         }) {
                     @Override

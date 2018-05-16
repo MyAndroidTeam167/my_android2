@@ -383,7 +383,7 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
                                         public void onResponse(String response) {
                                             Log.e("check", "This is resp" + response);
                                             if (response.equals("true")) {
-                                                Toast.makeText(context, "Activity Verified", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(context, "Activity Verified Successfully", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(context, ShowTaskViewPagerActivity
                                                         .class);
                                                 startActivity(intent);

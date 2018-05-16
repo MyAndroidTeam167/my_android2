@@ -457,6 +457,8 @@ public class ShowProfileActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(ShowProfileActivity.this,R.string.error_text, Toast.LENGTH_LONG).show();
                             }
                         }) {
                     @Override

@@ -193,7 +193,7 @@ public class OTPActivity extends AppCompatActivity {
                     otpmessage = intent.getStringExtra("message");
                     progressDialog.dismiss();
                     actotp.setText(otpmessage);
-                    //submitotp();
+                    submitotp();
                 }
                     //Do whatever you want with the code here
 
@@ -314,7 +314,7 @@ public class OTPActivity extends AppCompatActivity {
                                         @Override
                                         public void onErrorResponse(VolleyError error) {
                                             progressDialog.dismiss();
-                                            Toast.makeText(OTPActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(OTPActivity.this, R.string.error_text, Toast.LENGTH_LONG).show();
                                         }
                                     }) {
                                 @Override
@@ -327,6 +327,7 @@ public class OTPActivity extends AppCompatActivity {
                             RequestQueue requestQueue = Volley.newRequestQueue(context);
                             requestQueue.add(stringRequest);
                         } catch (Exception e) {
+                            e.printStackTrace();
                         }
 
                     }else{}

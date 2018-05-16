@@ -449,6 +449,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                             FirebaseMessaging.getInstance().unsubscribeFromTopic("user_" + user_num);
                             SharedPreferencesMethod.clear(context);
                             SharedPreferencesMethod.setBoolean(context, "Login", false);
+                            Toast.makeText(context, "Logged Out Please login to Continue...", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context, MainActivity.class);
                             startActivity(intent);
                             finish();

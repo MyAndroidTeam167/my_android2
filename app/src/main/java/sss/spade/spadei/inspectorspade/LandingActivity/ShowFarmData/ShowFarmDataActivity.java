@@ -427,6 +427,7 @@ public class ShowFarmDataActivity extends AppCompatActivity implements View.OnCl
                 requestQueue.add(stringRequest);
             } catch (Exception e) {
                 progressDialog.dismiss();
+                e.printStackTrace();
             }
             return "";
         }
@@ -495,7 +496,7 @@ public class ShowFarmDataActivity extends AppCompatActivity implements View.OnCl
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             progressDialog.dismiss();
-                            Toast.makeText(ShowFarmDataActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ShowFarmDataActivity.this, R.string.error_text, Toast.LENGTH_SHORT).show();
                         }
                     }) {
                 @Override
@@ -509,6 +510,7 @@ public class ShowFarmDataActivity extends AppCompatActivity implements View.OnCl
             RequestQueue requestQueue = Volley.newRequestQueue(context);
             requestQueue.add(stringRequest);
         } catch (Exception e) {
+            e.printStackTrace();
         }
 
 

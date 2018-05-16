@@ -1,3 +1,4 @@
+/*
 package sss.spade.spadei.inspectorspade.FarmActivities;
 
 import android.app.ProgressDialog;
@@ -61,12 +62,14 @@ public class ChatActivity extends AppCompatActivity {
     final String URL = "http://spade.farm/app/index.php/farmApp/send_chat_messages";
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        /*super.onCreate(savedInstanceState);
+        */
+/*super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String[] adobe_products = getResources().getStringArray(R.array.adobe_products);
 
         // Binding resources Array to ListAdapter
-        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, R.id.label, adobe_products));*/
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, R.id.label, adobe_products));*//*
+
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_chat);
@@ -77,16 +80,21 @@ public class ChatActivity extends AppCompatActivity {
         listview = (ListView)findViewById(R.id.lvComments);
         ct1= SharedPreferencesMethod.getString(context,"cctt");
 
-       /* commentButton=(Button)findViewById(R.id.commentButton);
-        newComment = (EditText)findViewById(R.id.newComment);*/
-        /*final ArrayList<String> list = new ArrayList<String>();
+       */
+/* commentButton=(Button)findViewById(R.id.commentButton);
+        newComment = (EditText)findViewById(R.id.newComment);*//*
+
+        */
+/*final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
-        }*/
+        }*//*
+
         Bundle extras = getIntent().getExtras();
         fetch_id = extras.getString("fetchId");
 
-      /*  etcomment=(EditText)findViewById(R.id.chat_content);
+      */
+/*  etcomment=(EditText)findViewById(R.id.chat_content);
         etcomment.setVisibility(View.GONE);
         imageView=(ImageView)findViewById(R.id.post_button);
         imageView.setVisibility(View.GONE);
@@ -94,7 +102,8 @@ public class ChatActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
         params.weight = 1.0f;
         listview.setLayoutParams(params);
-      */
+      *//*
+
       callVolley();
 
 
@@ -153,7 +162,8 @@ public class ChatActivity extends AppCompatActivity {
                                                         int position, long id) {
                                     final String item = (String) parent.getItemAtPosition(position);
 //                                    Toast.makeText(context,item,LENGTH_SHORT).show();
-                                    /*view.animate().setDuration(2000).alpha(0)
+                                    */
+/*view.animate().setDuration(2000).alpha(0)
                                             .withEndAction(new Runnable() {
                                                 @Override
                                                 public void run() {
@@ -161,7 +171,8 @@ public class ChatActivity extends AppCompatActivity {
                                                     adapter.notifyDataSetChanged();
                                                     view.setAlpha(1);
                                                 }
-                                            });*/
+                                            });*//*
+
                                 }
                             });
                             Log.e("checkArray :","this is resp: "+response);
@@ -214,4 +225,4 @@ public class ChatActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         requestQueue.add(stringRequest);
     }
-}
+}*/

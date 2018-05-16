@@ -312,7 +312,7 @@ public class VerifyFarmerReplyActivity extends AppCompatActivity {
                             public void onResponse(String response) {
                                 Log.e("check","This is resp"+response);
                                 if(response.equals("true")) {
-                                    Toast.makeText(context, "Action Submitted", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, "Response Submitted", Toast.LENGTH_SHORT).show();
                                     Date c = Calendar.getInstance().getTime();
                                     System.out.println("Current time => " + c);
                                     SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
@@ -354,6 +354,7 @@ public class VerifyFarmerReplyActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 Log.e("checkArray",error.toString());
+
                                             /*NetworkResponse networkResponse = error.networkResponse;
                                             Log.e("checkArray",String.valueOf(networkResponse.statusCode));*/
                                 if (error instanceof TimeoutError || error instanceof NoConnectionError) {

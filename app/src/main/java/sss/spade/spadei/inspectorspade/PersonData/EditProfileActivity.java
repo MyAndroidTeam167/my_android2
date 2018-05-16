@@ -597,6 +597,7 @@ public class EditProfileActivity extends AppCompatActivity {
         return json;
     }
 
+/*
     public void GetText() throws JSONException {
         // Get user defined values
 
@@ -703,6 +704,7 @@ public class EditProfileActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+*/
 
 
     private class AsyncTaskRunner extends AsyncTask<String, Void, String> {
@@ -712,8 +714,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-
-
             sfrstnamefill = frstnamefill.getText().toString();
             smiddlenamefill = middnamefill.getText().toString();
             slastnamefill = lastnamefill.getText().toString();
@@ -728,20 +728,13 @@ public class EditProfileActivity extends AppCompatActivity {
             scityprofileadd = cityprofileadd.getSelectedItem().toString();
             sstateprofileadd = stateprofileadd.getSelectedItem().toString();
             Email=emailfill.getText().toString();
-
-
             try {
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
-
-
                         new com.android.volley.Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-
-
                                 if (response.equals("\"0\"")) {
                                     progressDialog.dismiss();
-
                                 } else {
                                     Toast.makeText(context, "Profile Updated Successfully", Toast.LENGTH_SHORT).show();
                                     progressDialog.dismiss();
@@ -755,8 +748,8 @@ public class EditProfileActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 progressDialog.dismiss();
-                                Toast.makeText(EditProfileActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
-                                progressDialog.dismiss();
+                                Log.e("Error",error.toString());
+                                Toast.makeText(EditProfileActivity.this,R.string.error_text, Toast.LENGTH_SHORT).show();
 
                             }
                         }) {

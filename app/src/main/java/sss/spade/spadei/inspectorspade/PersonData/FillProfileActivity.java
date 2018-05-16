@@ -692,8 +692,8 @@ public class FillProfileActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         // Log.e(TAG,error.toString());
                         progressDialog.dismiss();
-                        Toast.makeText(FillProfileActivity.this,error.toString(), Toast.LENGTH_LONG).show();
-                        Log.e("ERROR:",error.toString());
+                        Toast.makeText(FillProfileActivity.this,R.string.error_text, Toast.LENGTH_LONG).show();
+                        Log.e("Error:",error.toString());
 
 
                     }

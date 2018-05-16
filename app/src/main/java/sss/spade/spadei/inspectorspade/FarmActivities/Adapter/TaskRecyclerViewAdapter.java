@@ -182,6 +182,7 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
             //task_recycler_single_view_relative=(RelativeLayout)v.findViewById(R.id.recycler_single_view_relative);
             imageView=(ImageView)v.findViewById(R.id.recycler_single_view_relative);
             verify_activity_butt=(Button)v.findViewById(R.id.verify_activity_ins);
+            taskLinearLayout=(LinearLayout)v.findViewById(R.id.task_linear_layout);
 
             verify_activity_butt.setVisibility(View.GONE);
 
@@ -213,8 +214,51 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
                 }
             });
 
+            tvdescripion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position  =   getAdapterPosition();
+                    final Taskdata taskdata = taskdatum.get(position);
+                    Intent intent = new Intent(context, FarmActionReplyActivity.class);
+                    intent.putExtra("id",taskdata.getFarm_dwork_num());
+                    intent.putExtra("task_date",taskdata.getTaskDate());
+                    intent.putExtra("fromactivity","pager");
+                    view.getContext().startActivity(intent);
+                    ((Activity)view.getContext()).finish();
+                }
+            });
 
-           // farm_latest_image=(ImageView)di
+            tvdate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position  =   getAdapterPosition();
+                    final Taskdata taskdata = taskdatum.get(position);
+                    Intent intent = new Intent(context, FarmActionReplyActivity.class);
+                    intent.putExtra("id",taskdata.getFarm_dwork_num());
+                    intent.putExtra("task_date",taskdata.getTaskDate());
+                    intent.putExtra("fromactivity","pager");
+                    view.getContext().startActivity(intent);
+                    ((Activity)view.getContext()).finish();
+                }
+            });
+
+            tvtitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position  =   getAdapterPosition();
+                    final Taskdata taskdata = taskdatum.get(position);
+                    Intent intent = new Intent(context, FarmActionReplyActivity.class);
+                    intent.putExtra("id",taskdata.getFarm_dwork_num());
+                    intent.putExtra("task_date",taskdata.getTaskDate());
+                    intent.putExtra("fromactivity","pager");
+                    view.getContext().startActivity(intent);
+                    ((Activity)view.getContext()).finish();
+                }
+            });
+
+
+
+            // farm_latest_image=(ImageView)di
 
            /* mtoggleButton = (ToggleButton)v.findViewById(R.id.toggleButton2);
             mtoggleButton.setText("Task Not Done");
