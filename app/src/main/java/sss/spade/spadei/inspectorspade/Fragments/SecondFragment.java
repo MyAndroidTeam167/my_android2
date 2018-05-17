@@ -102,8 +102,6 @@ public class SecondFragment extends Fragment {
             misdone=getArguments().getStringArray(ARG_ISDONE);
             farm_dwork_num=getArguments().getStringArray(ARG_FARM_DWORK_NUM);
             mPage = getArguments().getInt(ARG_PAGE);
-
-
         }
     }
 

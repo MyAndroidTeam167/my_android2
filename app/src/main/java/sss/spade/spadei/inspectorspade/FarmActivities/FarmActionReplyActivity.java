@@ -129,6 +129,7 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
     String gpsc1,gpsc2,gpsc3,gpsc4,gpsc5,gpsc6;
     String[] gpsc1arr,gpsc2arr,gpsc3arr,gpsc4arr,gpsc5arr,gpsc6arr;
     Boolean locationchck=false;
+    String comp_gps_check="";
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -165,6 +166,7 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
         ct1=SharedPreferencesMethod.getString(context,"cctt");
 
         connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        comp_gps_check=SharedPreferencesMethod.getString(context,SharedPreferencesMethod.COMP_GPS);
 
 
         TextView title = (TextView) findViewById(R.id.tittle);
@@ -219,7 +221,8 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
         final String task_date = extras.getString("task_date");
         from=extras.getString("fromactivity");
 
-        Toast.makeText(context, id+" "+task_date+" "+from, Toast.LENGTH_SHORT).show();
+//
+//        Toast.makeText(context, id+" "+task_date+" "+from, Toast.LENGTH_SHORT).show();
 
         if(from!=null){
         if(from.equals("pager")){
@@ -230,7 +233,7 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
         farm_num= DataHandler.newInstance().getFarmnum();
 
 
-        Toast.makeText(context, farm_num, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(context, farm_num, Toast.LENGTH_SHORT).show();
 
 
         Date c = Calendar.getInstance().getTime();
@@ -356,27 +359,31 @@ public class FarmActionReplyActivity extends AppCompatActivity implements Locati
                         }
 
                         if (connected) {
-                            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                                // TODO: Consider calling
-                                //    ActivityCompat#requestPermissions
-                                // here to request the missing permissions, and then overriding
-                                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                                //                                          int[] grantResults)
-                                // to handle the case where the user grants the permission. See the documentation
-                                // for ActivityCompat#requestPermissions for more details.
-                                return;
-                            }
-                            startLocationUpdates();
-                            mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-                            flagg = "loc";
+                            if(comp_gps_check.equals("1")) {
+                                if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                    // TODO: Consider calling
+                                    //    ActivityCompat#requestPermissions
+                                    // here to request the missing permissions, and then overriding
+                                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                    //                                          int[] grantResults)
+                                    // to handle the case where the user grants the permission. See the documentation
+                                    // for ActivityCompat#requestPermissions for more details.
+                                    return;
+                                }
+                                startLocationUpdates();
+                                mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+                                flagg = "loc";
 
-                            onLocationChanged(mLocation);
+                                onLocationChanged(mLocation);
+                            }else{
+                                locationchck=true;
+                            }
                         } else {
                             Toast.makeText(context, "Turn on the Network", Toast.LENGTH_SHORT).show();
                         }
 
                         if (locationchck) {
-                            Toast.makeText(FarmActionReplyActivity.this, "You are in location range", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(FarmActionReplyActivity.this, "You are in location range", Toast.LENGTH_SHORT).show();
                             StringRequest stringRequestNew = new StringRequest(Request.Method.POST, SAVE_INSPECTOR_RESPONSE_URL,
                                     new Response.Listener<String>() {
                                         @Override

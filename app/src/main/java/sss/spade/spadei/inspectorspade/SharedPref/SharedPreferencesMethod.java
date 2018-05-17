@@ -22,6 +22,17 @@ public class SharedPreferencesMethod {
     public static final String BINDED = "USER_BINDED";
     public static final String DEVICE_ID="DEVICE_ID";
     public static final String IS_OFFLINE_ENABLED="IS_OFFLINE_ENABLED";
+    public static final String COMP_AUDIO_REPLY="COMP_AUDIO_REPLY";
+    public static final String COMP_LIVE_BACK_TECH_SUPPORT="COMP_LIVE_BACK_TECH_SUPPORT";
+    public static final String COMP_IMAGES="COMP_IMAGES";
+    public static final String COMP_GPS="COMP_GPS";
+    public static final String COMP_OFFLINE_BACK_TECH_SUPPORT="COMP_OFFLINE_BACK_TECH_SUPPORT";
+    public static final String COMP_FARM_COUNT="COMP_FARM_COUNT";
+    public static final String COMP_INSPECTOR_COUNT="COMP_INSPECTOR_COUNT";
+    public static final String COMP_WEATHER="COMP_WEATHER";
+    public static final String COMP_LICENSE_PERIOD="COMP_LICENSE_PERIOD";
+    public static final String COMP_MAX_FARMS="COMP_MAX_FARMS";
+    public static final String SETAPCHECK="SETAPCHECK";
 
 
 

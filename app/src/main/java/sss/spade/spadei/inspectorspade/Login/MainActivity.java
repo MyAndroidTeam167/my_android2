@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             finish(); // finish activity
         } else {
             Toast.makeText(this, "Press Back again to Exit.",
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_LONG).show();
             exit = true;
             new Handler().postDelayed(new Runnable() {
                 @Override

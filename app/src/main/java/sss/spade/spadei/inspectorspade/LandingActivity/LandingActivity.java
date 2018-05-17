@@ -100,10 +100,13 @@ public class LandingActivity extends AppCompatActivity
     private static final String REGISTER_URL = "http://spade.farm/app/index.php/inspectorApp/get_farms_under_inspector";
     private static final String REGISTER_URL_DATA_PROFILE = "http://spade.farm/app/index.php/signUp/fetch_profile";
     private static final String URL_CHECK_COMPANY_NUM = "http://spade.farm/app/index.php/farmApp/is_binded";
+    private static final String URL_CHCECK_APP_REGISTORY = "http://spade.farm/app/index.php/signUp/send_comp_registry";
+    public final String KEY_APP_REG_TOKEN = "token2";
 
     public static final String KEY_INSPECTOR_NUM = "inspector_num";
     final String USER_NUM = "user_num";
     TextView mywidget;
+    Boolean is_app_reg_checked = false;
 
     String inspectornum="152";
     ProgressDialog progressDialog;
@@ -270,6 +273,14 @@ public class LandingActivity extends AppCompatActivity
 
             if (is_binded) {
                 DELAY_MILLIS = 0;
+                DELAY_MILLIS = 0;
+                is_app_reg_checked = SharedPreferencesMethod.getBoolean(context, SharedPreferencesMethod.SETAPCHECK);
+                if (is_app_reg_checked) {
+
+                } else {
+                    CheckAppRegistry();
+                    DELAY_MILLIS = 2000;
+                }
             } else {
                 DELAY_MILLIS = 2000;
                 rel_binding_lay.setVisibility(View.VISIBLE);
@@ -991,6 +1002,76 @@ public class LandingActivity extends AppCompatActivity
 
 
     }
+
+
+    private void CheckAppRegistry() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_CHCECK_APP_REGISTORY,
+
+                new com.android.volley.Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        JSONObject jobject = null;
+                        try {
+                            jobject = new JSONObject(response);
+                            String result = jobject.getString("result");
+                            String status = jobject.getString("status");
+                            if (status.equals("0")) {
+
+                            } else {
+                                JSONObject resultobject = new JSONObject(result);
+                                String gps = resultobject.getString("gps");
+                                String maxFarms = resultobject.getString("maxfarms");
+                                String images = resultobject.getString("images");
+                                String weather = resultobject.getString("weather");
+                                String audio_reply=resultobject.getString("audio");
+                                String offline_back_support_tech=resultobject.getString("obst");
+                                String live_back_support_tech=resultobject.getString("lbst");
+                                String license_period=resultobject.getString("lp");
+                                String farm_count=resultobject.getString("fc");
+                                String inspector_count=resultobject.getString("ic");
+
+                                SharedPreferencesMethod.setString(context, "GPSAPPCHECK", gps);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_AUDIO_REPLY,audio_reply);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_FARM_COUNT,farm_count);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_GPS,gps);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_INSPECTOR_COUNT,inspector_count);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_LICENSE_PERIOD,license_period);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_LIVE_BACK_TECH_SUPPORT,live_back_support_tech);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_OFFLINE_BACK_TECH_SUPPORT,offline_back_support_tech);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_IMAGES,images);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_MAX_FARMS,maxFarms);
+                                SharedPreferencesMethod.setString(context,SharedPreferencesMethod.COMP_WEATHER,weather);
+                                SharedPreferencesMethod.setBoolean(context, SharedPreferencesMethod.SETAPCHECK, true);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            progressDialog.dismiss();
+
+                        }
+
+                    }
+                },
+                new com.android.volley.Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("checkArray",error.toString());
+                        Toast.makeText(context, R.string.error_text, Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put(KEY_APP_REG_TOKEN, ct1);
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
+    }
+
 
   /*  private void hideItem()
     {
